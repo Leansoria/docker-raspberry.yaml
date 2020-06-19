@@ -40,10 +40,15 @@ echo "deb [arch=armhf] https://download.docker.com/linux/debian \
     sudo tee /etc/apt/sources.list.d/docker.list
 ```
 
-### 6. Instalar Docker
+### 6. Instalar Docker y docker-compose
 
 ```
 sudo apt-get update && sudo apt-get install -y docker-ce docker-compose
+```
+### 6.B. Es mas facil instalar docker desde sl SH y luego docker compose
+```
+curl -sSL https://get.docker.com | sh
+sudo apt-get -y docker-compose
 ```
 
 ### 7. Agregar usuario al grupo docker y desloguearse y volverse a loguear
@@ -69,8 +74,8 @@ services:
       - 139:130
       - 445:445
     volumes:
-      - /usr/share/zoneinfo/America/Argentina/Mendoza:/etc/localtime
-      - /home/pi/media:/media
+      - /usr/share/zoneinfo/America/Argentina/Buenos_Aires:/etc/localtime
+      - /media/usb:/media
 ```
 
 
