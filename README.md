@@ -10,7 +10,14 @@ Este es un instructivo para un tutorial en Youtube https://youtu.be/pliGG1M87W8
   
 ### 2. Una vez que raspbian está instalado:
    * Cambiar password de usuario Pi (recomendado)
-
+   sudo raspi-config
+   Opcion 1: Change User Password (Se muestra promt a ingresar nueva contraseña)
+   
+### 2.1 Habilitar SSH
+    sudo raspi-config
+    Opcion 5: Interfacing Options
+    Opcion P2 SSH: Enable remoto SSH
+    
 ### 3. Instalar paquetes necesarios
 
 ```
